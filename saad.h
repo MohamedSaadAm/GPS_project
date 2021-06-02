@@ -4,7 +4,7 @@
 	
 	void initportA(){
 	SYSCTL_RCGCGPIO_R |= 0x01;          
-//	while ((SYSCTL_PRGPIO_R & 0x01)==0);
+	while ((SYSCTL_PRGPIO_R & 0x01)==0);
 	GPIO_PORTA_DIR_R |= 0xFC;
 	GPIO_PORTA_DEN_R |= 0xFC;
 	GPIO_PORTA_AMSEL_R &= ~ 0xFC;
@@ -13,7 +13,7 @@
 	}
 	void initportB(){
 	SYSCTL_RCGCGPIO_R |= 0x02;        
-	//while ((SYSCTL_PRGPIO_R & 0x02)==0);  
+	while ((SYSCTL_PRGPIO_R & 0x02)==0);  
 	GPIO_PORTB_DIR_R |= 0x1C; 
 	GPIO_PORTB_DEN_R |= 0x1C;
 	GPIO_PORTB_AMSEL_R &= ~ 0x1C; 
@@ -22,7 +22,7 @@
 	}
 	void initportD(){
 	SYSCTL_RCGCGPIO_R |= 0x08;          
-//	while ((SYSCTL_PRGPIO_R & 0x08)==0); 
+	while ((SYSCTL_PRGPIO_R & 0x08)==0); 
 	GPIO_PORTD_LOCK_R = 0x4C4F434B;    
 	GPIO_PORTD_CR_R |= 0x80;
 	GPIO_PORTD_DIR_R |= 0xCF;
@@ -33,16 +33,16 @@
 	}
 	void initportE(){
 	SYSCTL_RCGCGPIO_R |= 0x10;        
-//	while ((SYSCTL_PRGPIO_R & 0x10)==0); 
+	while ((SYSCTL_PRGPIO_R & 0x10)==0); 
 	GPIO_PORTE_DIR_R |= 0x3F;
 	GPIO_PORTE_DEN_R |= 0x3F;            
 	GPIO_PORTE_AMSEL_R &= ~ 0x3F;  
 	GPIO_PORTE_AFSEL_R &= ~ 0x3F;  
 	GPIO_PORTE_PCTL_R &= ~ 0x00FFFFFF;
 	}
-	void initportF(){
+	/*void initportF(){
 	SYSCTL_RCGCGPIO_R |= 0x20;          // active clock for port F
-//	while ((SYSCTL_PRGPIO_R&0x20)==0){}; // wait for satilization
+	while ((SYSCTL_PRGPIO_R&0x20)==0){}; // wait for satilization
 	GPIO_PORTF_LOCK_R = 0x4C4F434B ;    // unlock GPIO Port F
 	GPIO_PORTF_CR_R |= 0x01;            // allow changes to P F1
 	GPIO_PORTF_AMSEL_R |= 0x02;         // disable analog on port F1
@@ -56,6 +56,7 @@ void turn_led_on(){
 	initportF();
 	GPIO_PORTF_DATA_R |= 0x02;
 }
+*/
 	
 void dispaly_digit_3(int e){
 	switch (e){
