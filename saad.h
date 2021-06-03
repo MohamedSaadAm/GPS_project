@@ -31,6 +31,7 @@
 	GPIO_PORTD_AFSEL_R &= ~ 0xCF;
 	GPIO_PORTD_PCTL_R &= ~ 0xFF00FFFF;   
 	}
+
 	void initportE(){
 	SYSCTL_RCGCGPIO_R |= 0x10;        
 	while ((SYSCTL_PRGPIO_R & 0x10)==0); 
