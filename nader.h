@@ -29,12 +29,16 @@ void coordinates() {
                                     line[i++] = c;
                                     c = readUART(); }
                                 break; }}}}}}}
+      
+    
                                 
-                                
-                                
-                                
-                                
-                                
-                                
+                                line_cutting[0] = strtok(line, ",");
+    while (line_cutting[k] != NULL && k < 14) {
+        k++;
+        line_cutting[k] = strtok(NULL, ",");
+    }
+
+float latitude() { return atof(line_cutting[2]); }
+float longitude() { return atof(line_cutting[4]); }
                                 
                                 
