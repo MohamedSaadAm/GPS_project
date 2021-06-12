@@ -32,7 +32,7 @@ void coordinates() {
       
     
                                 
-                                line_cutting[0] = strtok(line, ",");
+       line_cutting[0] = strtok(line, ",");
     while (line_cutting[k] != NULL && k < 14) {
         k++;
         line_cutting[k] = strtok(NULL, ",");
