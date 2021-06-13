@@ -1,65 +1,64 @@
 #include "tm4c123gh6pm.h"
 
-	
 void dispaly_digit_3(int e){
 	switch (e){
 		case 0:
-		 GPIO_PORTA_DATA_R &= ~ 0x20;
+			GPIO_PORTA_DATA_R &= ~ 0x20;
 		  GPIO_PORTA_DATA_R |= 0x1C;
 		  GPIO_PORTB_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R |= 0x30;
 		  break;
 		case 1:
-		 GPIO_PORTA_DATA_R &= ~ 0x24;
+			GPIO_PORTA_DATA_R &= ~ 0x24;
 		  GPIO_PORTA_DATA_R |= 0x18;
 		  GPIO_PORTB_DATA_R &= ~ 0x10;
 		  GPIO_PORTE_DATA_R &= ~ 0x30;
 		  break;
 		case 2:
-		  GPIO_PORTA_DATA_R |= 0x2C;
+			GPIO_PORTA_DATA_R |= 0x2C;
 		  GPIO_PORTA_DATA_R &= ~ 0x10;
 		  GPIO_PORTB_DATA_R &= ~ 0x10;
 		  GPIO_PORTE_DATA_R |= 0x30;
 		  break;
 		case 3:
-		 GPIO_PORTA_DATA_R |= 0x3C;
+			GPIO_PORTA_DATA_R |= 0x3C;
 		  GPIO_PORTB_DATA_R |= 0x23;
 		  GPIO_PORTB_DATA_R &= ~ 0x10;
 		  GPIO_PORTE_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R &= ~ 0x20;
 		  break;
 		case 4:
-		 GPIO_PORTA_DATA_R |= 0x38;
+			GPIO_PORTA_DATA_R |= 0x38;
 		  GPIO_PORTA_DATA_R &= ~ 0x04;
 		  GPIO_PORTB_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R &= ~ 0x30;
 		  break;
 		case 5:
-		 GPIO_PORTA_DATA_R |= 0x34;
+			GPIO_PORTA_DATA_R |= 0x34;
 		  GPIO_PORTB_DATA_R &= ~ 0x08;
 		  GPIO_PORTB_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R &= ~ 0x20;
 		  break;
 		case 6:
-		 GPIO_PORTA_DATA_R |= 0x30;
+			GPIO_PORTA_DATA_R |= 0x30;
 		  GPIO_PORTB_DATA_R &= ~ 0x0C;
 		  GPIO_PORTB_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R |= 0x30;
 		  break;
 		case 7:
-		 GPIO_PORTA_DATA_R |= 0x1C;
+			GPIO_PORTA_DATA_R |= 0x1C;
 		  GPIO_PORTA_DATA_R &= ~ 0x20;
 		  GPIO_PORTB_DATA_R &= ~ 0x10;
 		  GPIO_PORTE_DATA_R &= ~ 0x30;
 		  break;
 		case 8:
-		  GPIO_PORTA_DATA_R |= 0x3C;
+			GPIO_PORTA_DATA_R |= 0x3C;
 		  GPIO_PORTB_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R |= 0x30;
 		  break;
 		case 9:
-		  GPIO_PORTA_DATA_R |= 0x3C;
+			GPIO_PORTA_DATA_R |= 0x3C;
 		  GPIO_PORTB_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R |= 0x10;
 		  GPIO_PORTE_DATA_R &= ~ 0x20;
