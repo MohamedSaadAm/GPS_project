@@ -1,3 +1,5 @@
+#include "tm4c123gh6pm.h"
+
 void initportA(){
 	SYSCTL_RCGCGPIO_R |= 0x01;          
 	while ((SYSCTL_PRGPIO_R & 0x01)==0);
@@ -14,7 +16,7 @@ void initportA(){
 	GPIO_PORTB_DEN_R |= 0x1C;
 	GPIO_PORTB_AMSEL_R &= ~ 0x1C; 
 	GPIO_PORTB_AFSEL_R &= ~ 0x1C;
-	GPIO_PORTB_PCTL_R &= ~ 0x001FFF00;   
+	GPIO_PORTB_PCTL_R &= ~ 0x000FFF00;   
 	}
 	void initportD(){
 	SYSCTL_RCGCGPIO_R |= 0x08;          
